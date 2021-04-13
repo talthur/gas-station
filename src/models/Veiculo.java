@@ -2,18 +2,22 @@ package models;
 
 public class Veiculo {
 	
-	public Veiculo(double consumoEtanol, double consumoGasolina, int capacidadeTanque) {
+	private float consumoEtanol;
+	private float consumoGasolina;
+	private double capacidadeTanque;
+	private String placa;
+	private String modelo;
+	
+
+	public Veiculo(String modelo, float consumoEtanol, float consumoGasolina, double capacidadeTanque) {
 	
 		this.consumoEtanol = consumoEtanol;
 		this.consumoGasolina = consumoGasolina;
 		this.capacidadeTanque = capacidadeTanque;
+		this.modelo = modelo;
 		
 	}
 	
-	private double consumoEtanol;
-	private double consumoGasolina;
-	private int capacidadeTanque;
-	private String placa;
 	
 	public void setPlaca(String placa) {
 		this.placa = placa;
@@ -24,11 +28,15 @@ public class Veiculo {
 	public double getConsumoGasolina() {
 		return consumoGasolina;
 	}
-	public int getCapacidadeTanque() {
+	public double getCapacidadeTanque() {
 		return capacidadeTanque;
 	}
 	public String getPlaca() {
 		return placa;
+	}
+	
+	public String getModelo() {
+		return modelo;
 	}
 	
 

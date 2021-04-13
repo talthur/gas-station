@@ -32,7 +32,7 @@ public class CSVReaderVeiculos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(map);
+//		System.out.println(map);
 		return map;
 	}
 }
