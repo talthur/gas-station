@@ -1,20 +1,23 @@
 package models;
 
+import java.math.BigDecimal;
+
 public class Veiculo {
 	
-	private float consumoEtanol;
-	private float consumoGasolina;
-	private double capacidadeTanque;
+	private BigDecimal consumoEtanol;
+	private BigDecimal consumoGasolina;
+	private int capacidadeTanque;
 	private String placa;
 	private String modelo;
 	
 
-	public Veiculo(String modelo, float consumoEtanol, float consumoGasolina, double capacidadeTanque) {
+	public Veiculo(String modelo, BigDecimal consumoEtanol, BigDecimal consumoGasolina, int capacidadeTanque, String placa) {
 	
 		this.consumoEtanol = consumoEtanol;
 		this.consumoGasolina = consumoGasolina;
 		this.capacidadeTanque = capacidadeTanque;
 		this.modelo = modelo;
+		this.placa = placa;
 		
 	}
 	
@@ -22,10 +25,10 @@ public class Veiculo {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-	public double getConsumoEtanol() {
+	public BigDecimal getConsumoEtanol() {
 		return consumoEtanol;
 	}
-	public double getConsumoGasolina() {
+	public BigDecimal getConsumoGasolina() {
 		return consumoGasolina;
 	}
 	public double getCapacidadeTanque() {
