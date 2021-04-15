@@ -1,6 +1,7 @@
 package factory;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,8 +10,10 @@ import models.Veiculo;
 
 public class VeiculoFactory {
 
-	public void createVeiculo(HashMap<String, List<String>> dadosModelo, HashMap<String, String> dadosVeiculo) {
+	public ArrayList<Veiculo> createVeiculo(HashMap<String, List<String>> dadosModelo, HashMap<String, String> dadosVeiculo) {
 //		
+		ArrayList<Veiculo> arrayVeiculos = new ArrayList<Veiculo>();
+		
 		for (@SuppressWarnings("rawtypes")
 		Map.Entry me : dadosVeiculo.entrySet()) {
 
@@ -25,14 +28,15 @@ public class VeiculoFactory {
 			BigDecimal bigDecimalConsumoGasolina = new BigDecimal(consumoGasolina);
 			
 			int capacidadeTanque = Integer.valueOf(caracteristicas.get(2));
-			Veiculo veiculo = new Veiculo(modelo, bigDecimalConsumoEtanol, bigDecimalConsumoGasolina, capacidadeTanque, placa);
+			arrayVeiculos.add(new Veiculo(modelo, bigDecimalConsumoEtanol, bigDecimalConsumoGasolina, capacidadeTanque, placa));
 
-			System.out.println(veiculo.getCapacidadeTanque());
-			System.out.println(veiculo.getConsumoEtanol());
-			System.out.println(veiculo.getModelo());
-			System.out.println(veiculo.getPlaca());
+//			System.out.println(veiculo.getCapacidadeTanque());
+//			System.out.println(veiculo.getConsumoEtanol());
+//			System.out.println(veiculo.getModelo());
+//			System.out.println(veiculo.getPlaca());
 
 		}
 //		
+		return arrayVeiculos;
 	}
 }
