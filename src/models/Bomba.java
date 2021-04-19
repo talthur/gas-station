@@ -46,5 +46,22 @@ public class Bomba {
 	public void setLitrosPorMinuto(int litrosPorMinuto) {
 		this.litrosPorMinuto = litrosPorMinuto;
 	}
+	
+	public float quantoTempoDeAbastecimento(int capacidadeDoTanque, int litrosPorMinuto) {
+		 float tempoDeAbastecimento = capacidadeDoTanque / litrosPorMinuto;
+		 return tempoDeAbastecimento;
+	}
+	
+	public BigDecimal valorParaEncherOTanque(int capacidadeDoTanque, BigDecimal precoDoLitro){
+		BigDecimal capacidadeDoTanqueBD = new BigDecimal(capacidadeDoTanque);
+		BigDecimal valor = capacidadeDoTanqueBD.multiply(precoDoLitro);
+		return valor;
+	}
+	
+	public void guardaTotalDeLitros(double capacidadeDoTanque) {
+		double totalParcial = getTotalDeLitros();
+		totalParcial += capacidadeDoTanque;
+		setTotalDeLitros(totalParcial);
+	}
 
 }

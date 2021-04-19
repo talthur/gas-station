@@ -21,13 +21,11 @@ public class EscolheCombustivel {
 	}
 
 	public BigDecimal razaoKmReal(BigDecimal quantosKMporTanque, BigDecimal quantosReaisParaEncherOTanque) {
-		
-		System.out.println(quantosKMporTanque.divide(quantosReaisParaEncherOTanque,2, RoundingMode.HALF_UP));
-		
+				
 		return quantosKMporTanque.divide(quantosReaisParaEncherOTanque,2, RoundingMode.HALF_UP);
 	}
 
-	public String isGasOrAlcool(Veiculo veiculo, Bomba bombaGas, Bomba bombaAlcool) {
+	public Bomba isGasOrAlcool(Veiculo veiculo, Bomba bombaGas, Bomba bombaAlcool) {
 
 		BigDecimal quantosReaisParaEncherOTanqueAlcool = quantosReaisParaEncherOTanque(veiculo.getCapacidadeTanque(),
 				bombaAlcool.getPrecoDoLitro());
@@ -49,18 +47,18 @@ public class EscolheCombustivel {
 		BigDecimal zero = new BigDecimal(0);
 		
 		if (razaoKmRealAlcool.compareTo(zero) == 0) {
-			return "Gasolina";
+			return bombaGas;
 		}
 		
 		if (razaoKmRealGas.compareTo(zero) == 0) {
-			return "Alcool";
+			return bombaAlcool;
 		}
 
 		if (razaoKmRealGas.compareTo(razaoKmRealAlcool) > 0) {
-			return "Alcool";
+			return bombaAlcool;
 
 		} else {
-			return "Gasolina";
+			return bombaGas;
 		}
 
 	}

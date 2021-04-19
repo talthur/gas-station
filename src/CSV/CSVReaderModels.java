@@ -30,8 +30,6 @@ public class CSVReaderModels {
 				ar = new ArrayList<String>();
 			}
 			
-			
-			System.out.println(map);
 			br.close();	
 			
 		} catch (FileNotFoundException e) {
