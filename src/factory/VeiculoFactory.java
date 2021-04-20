@@ -8,8 +8,20 @@ import java.util.Map;
 
 import models.Veiculo;
 
-public class VeiculoFactory {
 
+/**
+ * Classe responsavel por produzir objetos do tipo Veículo, recebendo como parametro um HashMap previo. Retorna um Array de Veículos
+ * @author talthur
+ * @version 1.00
+ */
+public class VeiculoFactory {
+	
+	/**
+	 * Método que lê um um HashMap com dados do CSV e cria os Objetos Veículos com seus atributos, retorna um ArrayList de Objetos Veiculos
+	 * @param dadosModelo
+	 * @param dadosVeiculo
+	 * @return ArrayList de Veiculos arrayVeiculos
+	 */
 	public ArrayList<Veiculo> createVeiculo(HashMap<String, List<String>> dadosModelo, HashMap<String, String> dadosVeiculo) {
 //		
 		ArrayList<Veiculo> arrayVeiculos = new ArrayList<Veiculo>();
@@ -30,13 +42,7 @@ public class VeiculoFactory {
 			int capacidadeTanque = Integer.valueOf(caracteristicas.get(2));
 			arrayVeiculos.add(new Veiculo(modelo, bigDecimalConsumoEtanol, bigDecimalConsumoGasolina, capacidadeTanque, placa));
 
-//			System.out.println(veiculo.getCapacidadeTanque());
-//			System.out.println(veiculo.getConsumoEtanol());
-//			System.out.println(veiculo.getModelo());
-//			System.out.println(veiculo.getPlaca());
-
-		}
-//		
+		}	
 		return arrayVeiculos;
 	}
 }

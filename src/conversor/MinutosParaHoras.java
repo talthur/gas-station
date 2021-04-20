@@ -1,5 +1,11 @@
 package conversor;
 
+
+/**
+ * Classe conversora de minutos para horas, retornando em String
+ * @author talthur
+ * @version 1.00
+ */
 public class MinutosParaHoras {
 	
 	private float minutos;
@@ -8,6 +14,12 @@ public class MinutosParaHoras {
 		this.minutos = minutos;
 	}
 	
+	
+	
+	/**
+	 * Método que transforma valor passado no construtor da classe para horas.
+	 * @return String horaFormatada
+	 */
 	public String transforma() {
 		
 		String horas = String.valueOf(Math.round(minutos/60));

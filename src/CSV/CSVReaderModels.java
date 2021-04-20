@@ -8,8 +8,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
+/**
+ * Classe responsável por ler arquivo de Modelos em CSV e retornar um HashMap com o resultado
+ * @author talthur
+ * @version 1.00
+ */
 public class CSVReaderModels {
 
+	
+	/**
+	 * Método que lê arquivo CSV e retorna um HashMap.
+	 * @param path
+	 * @return HashMap map
+	 */
 	public HashMap<String, List<String>> readCSV(String path) {
 		
 		String line = "";

@@ -2,6 +2,12 @@ package models;
 
 import java.math.BigDecimal;
 
+/**
+ * Classe para objetos tipo Veículo, onde estão contido atributos e métodos para o mesmo.
+ * @author talthur
+ * @version 1.00
+ **/
+
 public class Veiculo {
 	
 	private BigDecimal consumoEtanol;

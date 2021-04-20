@@ -43,12 +43,19 @@ public class Main {
 			 minutosParaHora.transforma();
 			
 			
-			
 			System.out.println("[" + tempoDeAbastecimentoEmHoras + "]" + " Veiculo " + veiculo.getModelo() + ",Placa: " + veiculo.getPlaca() + " foi abastecido com: " + veiculo.getCapacidadeTanque() + " litros de " + bomba.getTipoCombustivel());
 			bomba.guardaTotalDeLitros(veiculo.getCapacidadeTanque());
+			System.out.println("-----------");
 			
 		}
-		
-		System.out.println(Bomba.getTotalDeLitros());
+		System.out.println("Resumo da simulação");
+		System.out.println("----------");
+		System.out.println("Total abastecido da bomba de Alcool: " + bombaAlcool.getTotalDeLitros());
+		System.out.println("Total abastecido da bomba de Gasolina: " + bombaGas.getTotalDeLitros());
+		System.out.println("Informações adicionais:");
+		System.out.println("Valor do litro de gasolina: " + bombaGas.getPrecoDoLitro().floatValue());
+		System.out.println("Valor do litro de alcool: " + bombaAlcool.getPrecoDoLitro().floatValue());
+		System.out.println("Velocidade de abastecimento da bomba de Gasolina: " + bombaGas.getLitrosPorMinuto());
+		System.out.println("Velocidade de abastecimento da bomba de Alcool: " + bombaAlcool.getLitrosPorMinuto());
 	}
 }
